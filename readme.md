@@ -4,3 +4,6 @@ Este proyecto presenta un programa para describir , modelar, e intentar solucion
 # Integrantes
 Brayan Camilo Bolivar Moreno 
 20241025029
+
+# Área de estudio
+Guaduas, Cundinamarca
