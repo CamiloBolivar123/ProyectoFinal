@@ -1,0 +1,89 @@
+<a href="index.html" class="volver">← </a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acerca de</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      height: calc(100vh - 80px); 
+    }
+
+    .texto {
+      width: 50%;
+      padding: 30px;
+      box-sizing: border-box;
+      background-color: #f5f5f5;
+    }
+
+    .texto h2 {
+      margin-top: 0;
+    }
+
+    #map {
+      width: 50%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Zona de Interés</h1>
+  </header>
+
+  <div class="container">
+    <div class="texto">
+      <h2>Descripción</h2>
+      <p>
+        Esta zona representa un área importante en la ciudad, delimitada para estudio urbano.  
+        Puedes interactuar con el mapa para ver más detalles.
+      </p>
+    </div>
+
+    <div id="map"></div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([5.068139052468412, -74.60273353963285], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    var polygonCoords = [
+      [5.067641273642622, -74.60360068959768],
+      [5.0669075330153674, -74.60263061056031],
+      [5.067944309207804, -74.60222522907704],
+      [5.068343740433781, -74.60284754443515]
+    ];
+
+    var polygon = L.polygon(polygonCoords, {
+      color: 'blue',
+      fillColor: '#3388ff',
+      fillOpacity: 0.5
+    }).addTo(map);
+
+    polygon.bindPopup("Zona de interés");
+  </script>
+
+</body>
+</html>
