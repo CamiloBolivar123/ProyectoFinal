@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Punto - GeoWater</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="../static/css/estilos.css">
+    <link rel="stylesheet" href="../static/css/acerca.css"> <link rel="stylesheet" href="../static/css/formulario.css"> <link rel="stylesheet" href="../static/css/addpoint.css"> </head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-content">
+            <div class="nav-left">
+                <img src="../static/img/logo.png" alt="Logo del Proyecto" class="logo">
+                <h1 class="project-title">GeoWater | Problemas de Acueducto en Guaduas</h1>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acerca.html">Acerca de</a></li>
+                    <li><a href="descripcion.html">Descripción</a></li>
+                    <li><a href="autor.html">Autor</a></li>
+                    <li><a href="addpoint.html" class="active">Agregar Punto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-container">
+    
+        <h2 class="page-title">Añadir Nueva Incidencia</h2>
+
+        <div class="addpoint-container">
+            <div class="columna-mapa">
+                <p class="map-instruction">Haz clic en el mapa para seleccionar un punto o arrastra el marcador existente.</p>
+                <div id="map"></div>
+            </div>
+
+            <div class="columna-formulario">
+                <form action="" method="POST" class="form-container">
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre del Lugar</label>
+                        <input type="text" id="nombre" name="nombre" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" name="direccion" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="celular">Celular de Contacto</label>
+                        <input type="tel" id="celular" name="celular" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado" class="form-select" required>
+                            <option value="1">Bueno</option>
+                            <option value="2">Regular</option>
+                            <option value="3">Malo</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="latitud">Latitud (se rellena con el mapa)</label>
+                        <input type="text" id="latitud" name="latitud" class="form-input" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="longitud">Longitud (se rellena con el mapa)</label>
+                        <input type="text" id="longitud" name="longitud" class="form-input" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="crecientes" style="flex-direction: row; align-items: center; gap: 10px;">
+                            <input type="checkbox" id="crecientes" name="crecientes" style="width: auto;">
+                            ¿Presenta Crecientes?
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="submit-button">Guardar Lugar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Brayan Camilo Bolivar</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../static/js/addpoint.js"></script>
+
+</body>
+</html>

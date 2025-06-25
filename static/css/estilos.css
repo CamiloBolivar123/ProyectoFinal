@@ -1,0 +1,155 @@
+/* --- Importación de Fuentes --- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+/* ===== PALETA DE COLORES: CARBÓN Y MENTA ===== */
+
+/* --- Reseteo y Estilos Globales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #1A1A1A;
+    color: #E0E0E0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Animación de Entrada --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Navegación Principal --- */
+.main-nav {
+    background-color: #242424;
+    padding: 0.8rem 2rem;
+    width: 100%;
+    border-bottom: 1px solid #333;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 1rem;
+    transition: transform 0.3s ease;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.project-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav a {
+    color: #E0E0E0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: #48C9B0;
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #48C9B0;
+}
+
+.main-nav a:hover::after {
+    width: 80%;
+}
+
+/* --- Contenido Principal --- */
+.content-container {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.interactive-card {
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 4rem; 
+}
+
+.interactive-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.description-section {
+    background-color: #242424;
+    padding: 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.description-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+/* --- Pie de Página --- */
+.main-footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* --- Estilo para el enlace de la página activa --- */
+.main-nav a.active {
+    color: #48C9B0; /* Mismo color menta del hover */
+}

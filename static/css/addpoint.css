@@ -1,0 +1,30 @@
+.addpoint-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.columna-mapa {
+    flex: 2; /* El mapa ocupará más espacio */
+    min-width: 300px;
+}
+
+.columna-formulario {
+    flex: 1; /* El formulario ocupará menos espacio */
+    min-width: 300px;
+}
+
+#map {
+    height: 600px; /* Hacemos el mapa más alto */
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #333;
+    cursor: crosshair; /* Cambia el cursor para indicar que se puede hacer clic */
+}
+
+.map-instruction {
+    text-align: center;
+    color: #A0A0A0;
+    margin-bottom: 1rem;
+    font-style: italic;
+}

@@ -1,0 +1,46 @@
+/* --- Estilos para la Lista de Tecnologías --- */
+.tech-list {
+    list-style: none; /* Quitamos los puntos de la lista */
+    padding: 0;
+    margin-top: 2.5rem;
+}
+
+.tech-list-item {
+    display: flex;
+    align-items: center; /* Centra verticalmente el logo con el texto */
+    background-color: #1A1A1A;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    margin-bottom: 1rem; /* Espacio entre cada elemento de la lista */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tech-list-item:hover {
+    transform: scale(1.02); /* Efecto de crecimiento sutil */
+    border-color: #48C9B0; /* Resalta el borde con el color menta */
+}
+
+.tech-logo {
+    flex-shrink: 0; /* Evita que el contenedor del logo se encoja */
+    width: 180px; /* Ancho fijo para alinear logos y darles espacio */
+    text-align: center;
+    margin-right: 2rem; /* Espacio entre el logo y el texto */
+}
+
+.tech-logo img {
+    max-height: 50px; /* Altura máxima para los logos */
+    max-width: 100%;  /* Se asegura que los logos anchos no se salgan */
+}
+
+.tech-info h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.tech-info p {
+    font-size: 0.9rem;
+    color: #A0A0A0;
+    line-height: 1.5;
+}

@@ -1,0 +1,47 @@
+/* Estilos específicos para la página acerca.html */
+
+.page-title {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid #48C9B0; /* Línea de acento menta */
+    padding-bottom: 1rem;
+}
+
+/* Contenedor principal para las dos columnas */
+.acerca-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se apilen en pantallas pequeñas */
+    gap: 3rem; /* Espacio entre las columnas */
+    align-items: flex-start; /* Alinea los items al inicio */
+}
+
+/* Estilo para cada columna */
+.columna-acerca {
+    flex: 1; /* Hace que cada columna ocupe el mismo espacio */
+    min-width: 300px; /* Ancho mínimo antes de que se apilen */
+    background-color: #242424; /* Mismo color que las tarjetas del index */
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.columna-acerca h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.columna-acerca p {
+    line-height: 1.7;
+}
+
+/* Estilo para el contenedor del mapa */
+#map {
+    width: 100%;
+    height: 500px; /* Altura del mapa */
+    border-radius: 8px;
+    border: 1px solid #333;
+}

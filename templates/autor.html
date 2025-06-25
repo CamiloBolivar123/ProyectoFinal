@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autor - GeoWater</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="../static/css/estilos.css">
+    <link rel="stylesheet" href="../static/css/acerca.css">
+    <link rel="stylesheet" href="../static/css/autor.css">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-content">
+            <div class="nav-left">
+                <img src="../static/img/logo.png" alt="Logo del Proyecto" class="logo">
+                <h1 class="project-title">GeoWater | Problemas de Acueducto en Guaduas</h1>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acerca.html">Acerca de</a></li>
+                    <li><a href="descripcion.html">Descripción</a></li>
+                    <li><a href="autor.html" class="active">Autor</a></li>
+                    <li><a href="addpoint.html">Agregar Punto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-container">
+    
+        <h2 class="page-title">Sobre el Autor</h2>
+
+        <div class="interactive-card">
+            <section class="description-section">
+                <div class="author-bio-container">
+                    <div class="author-photo">
+                        <img src="../static/img/autor.png" alt="Foto de Brayan Bolivar">
+                    </div>
+                    <div class="author-bio">
+                        <h3>Brayan Bolívar</h3>
+                        <p>
+                            Soy estudiante de Ingeniería Catastral y Geodesia en la Universidad Distrital Francisco José de Caldas. Este proyecto fue desarrollado como parte de la asignatura de Programación Orientada a Objetos (POO). 
+                            Mi enfoque ha sido el análisis de los problemas relacionados con el acueducto de Guaduas, Cundinamarca, buscando aplicar la tecnología para proponer soluciones prácticas y accesibles para los habitantes de la zona afectada.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="interactive-card">
+            <section class="description-section map-section">
+                <h3>Mi Lugar de Nacimiento</h3>
+                <div id="map"></div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Brayan Camilo Bolivar</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../static/js/autor.js"></script>
+
+</body>
+</html>

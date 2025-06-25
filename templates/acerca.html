@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de - GeoWater</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="../static/css/estilos.css">
+    <link rel="stylesheet" href="../static/css/acerca.css">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="nav-content">
+            <div class="nav-left">
+                <img src="../static/img/logo.png" alt="Logo del Proyecto" class="logo">
+                <h1 class="project-title">GeoWater | Problemas de Acueducto en Guaduas</h1>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acerca.html" class="active">Acerca de</a></li>
+                    <li><a href="descripcion.html">Descripción</a></li>
+                    <li><a href="autor.html">Autor</a></li>
+                    <li><a href="addpoint.html">Agregar Punto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-container">
+    
+        <h2 class="page-title">Acerca del Proyecto y su Alcance</h2>
+
+        <div class="acerca-container">
+            <div class="columna-acerca">
+                <h2>Descripción del Proyecto</h2>
+                <p>
+                    Este proyecto está enfocado en investigar un problema recurrente de suministro de agua potable que afecta al barrio Benjamín Herrera, ubicado en Guaduas, Cundinamarca, Colombia. Durante las horas de la noche, los residentes del barrio experimentan cortes frecuentes en el servicio de acueducto, lo que genera inconvenientes en sus actividades diarias.
+                </p>
+                <p>
+                    El objetivo principal de este proyecto es entender las causas subyacentes de esta interrupción en el suministro de agua. Para ello, se realizará un análisis detallado de la infraestructura del sistema de acueducto, con el fin de identificar posibles fallas en las redes de distribución, las estaciones de bombeo o problemas técnicos relacionados con la presión del agua.
+                </p>
+            </div>
+
+            <div class="columna-acerca">
+                <h2>Zona de Estudio</h2>
+                <div id="map"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Brayan Camilo Bolivar</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../static/js/acerca.js"></script>
+
+</body>
+</html>

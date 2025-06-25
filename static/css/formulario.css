@@ -1,0 +1,67 @@
+/* Estilos específicos para el formulario en addpoint.html */
+
+.form-container {
+    display: flex;
+    flex-direction: column; /* Apila los grupos de formulario verticalmente */
+    gap: 1.5rem; /* Espacio entre cada campo del formulario */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-family: 'Montserrat', sans-serif;
+    color: #E0E0E0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Estilo base para todos los campos de entrada */
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: #1A1A1A;
+    color: #E0E0E0;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Resaltado al hacer foco en un campo */
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #48C9B0; /* Color menta de acento */
+    box-shadow: 0 0 0 3px rgba(72, 201, 176, 0.2);
+}
+
+.form-textarea {
+    resize: vertical; /* Permite al usuario cambiar la altura del área de texto */
+    min-height: 120px;
+}
+
+.submit-button {
+    background-color: #48C9B0;
+    color: #1A1A1A; /* Texto oscuro para buen contraste */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    align-self: flex-start; /* Se alinea a la izquierda del contenedor */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #52d4b9;
+    transform: translateY(-2px);
+}
